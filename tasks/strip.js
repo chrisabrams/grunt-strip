@@ -17,8 +17,11 @@ module.exports = function(grunt) {
 
     var options = this.options();
 
-    if (options.nodes) {
-      nodes = options.nodes instanceof Array  ? options.nodes : [options.nodes];
+    var data = this.data;
+
+    if (data.nodes) {
+
+      nodes = data.nodes instanceof Array  ? data.nodes : [data.nodes];
     }
 
     this.files.forEach(function(fileObj){
